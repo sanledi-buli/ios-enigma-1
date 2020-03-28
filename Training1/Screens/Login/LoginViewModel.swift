@@ -10,31 +10,28 @@ import RxSwift
 
 class LoginViewModel {
     private let disposeBag = DisposeBag()
-    private let authentication: Authentication
+    private let userTokenRepo = UserTokenRepository.shared
     
     let username = BehaviorSubject(value: "")
     let password = BehaviorSubject(value: "")
     let isLoginActive: Observable<Bool>
     
-    let didSignIn = PublishSubject<Void>()
-    let didFailSignIn = PublishSubject<Error>()
     
     let didLogin = PublishSubject<Void>()
     let didFailLogin = PublishSubject<Error>()
     
-    init(authentication: Authentication) {
-        self.authentication = authentication
+    init() {
         self.isLoginActive = Observable.combineLatest(self.username, self.password).map { $0.0 != "" && $0.1 != "" }
     }
     
     func loginTapped(username: String, password: String) {
-        self.authentication.signIn(username: username, password: password)
+        self.userTokenRepo.login(username: username, password: password)
             .map { _ in }
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: {  _ in
-                self.didSignIn.onNext(())
+                self.didLogin.onNext(())
             }, onError: { [weak self] error in
-                self?.didFailSignIn.onNext(error)
+                self?.didFailLogin.onNext(error)
             })
             .disposed(by: self.disposeBag)
     }

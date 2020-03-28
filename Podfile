@@ -7,6 +7,7 @@ target 'Training1' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RealmSwift'
 
   # Pods for Training1
 

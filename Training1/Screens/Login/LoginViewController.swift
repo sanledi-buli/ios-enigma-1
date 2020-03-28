@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
             .bind(to: self.loginButton.rx.isEnabled)
             .disposed(by: self.disposeBag)
         
-        viewModel.didFailSignIn
+        viewModel.didFailLogin
             .subscribe(onNext: { error in
                 self.showAlert(title: "Login Failed", message: error.localizedDescription)
             })
