@@ -8,7 +8,8 @@ target 'Training1' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RealmSwift'
-
+  pod 'Alamofire', '~> 5.0'
+  pod 'Moya/RxSwift', '~> 14.0'
   # Pods for Training1
 
 end
