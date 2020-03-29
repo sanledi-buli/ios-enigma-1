@@ -10,6 +10,8 @@ target 'Training1' do
   pod 'RealmSwift'
   pod 'Alamofire', '~> 5.0'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'netfox'
+  pod 'JASON'
   # Pods for Training1
 
 end

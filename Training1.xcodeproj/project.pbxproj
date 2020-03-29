@@ -27,6 +27,12 @@
 		BA4BE66D242F8109009EE493 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4BE66C242F8109009EE493 /* HomeViewController.xib */; };
 		BA4BE66F242F8130009EE493 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BE66E242F8130009EE493 /* HomeViewController.swift */; };
 		BA4BE672242F9DD3009EE493 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BE671242F9DD3009EE493 /* UserToken.swift */; };
+		BA8F592124303F4D00FFABEB /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592024303F4D00FFABEB /* APIProvider.swift */; };
+		BA8F59242430432D00FFABEB /* PublicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F59232430432D00FFABEB /* PublicApi.swift */; };
+		BA8F59262430450F00FFABEB /* PublicDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F59252430450F00FFABEB /* PublicDog.swift */; };
+		BA8F59282430457B00FFABEB /* PublicDogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F59272430457B00FFABEB /* PublicDogRepository.swift */; };
+		BA8F592A24304BDC00FFABEB /* RxMoya+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592924304BDC00FFABEB /* RxMoya+JSON.swift */; };
+		BA8F592C24304D0A00FFABEB /* MoyaResponse+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592B24304D0A00FFABEB /* MoyaResponse+JSON.swift */; };
 		BAB8A638242AFEA0004FD26C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A637242AFEA0004FD26C /* AppDelegate.swift */; };
 		BAB8A63E242AFEA1004FD26C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB8A63D242AFEA1004FD26C /* Assets.xcassets */; };
 		BAB8A641242AFEA1004FD26C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB8A640242AFEA1004FD26C /* Preview Assets.xcassets */; };
@@ -56,6 +62,12 @@
 		BA4BE66C242F8109009EE493 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		BA4BE66E242F8130009EE493 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA4BE671242F9DD3009EE493 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		BA8F592024303F4D00FFABEB /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		BA8F59232430432D00FFABEB /* PublicApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicApi.swift; sourceTree = "<group>"; };
+		BA8F59252430450F00FFABEB /* PublicDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDog.swift; sourceTree = "<group>"; };
+		BA8F59272430457B00FFABEB /* PublicDogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDogRepository.swift; sourceTree = "<group>"; };
+		BA8F592924304BDC00FFABEB /* RxMoya+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxMoya+JSON.swift"; sourceTree = "<group>"; };
+		BA8F592B24304D0A00FFABEB /* MoyaResponse+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+JSON.swift"; sourceTree = "<group>"; };
 		BAB8A634242AFEA0004FD26C /* Training1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8A637242AFEA0004FD26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB8A63D242AFEA1004FD26C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +102,7 @@
 			children = (
 				BA08795A242FA3B5000CB38D /* RealmBase */,
 				BA087961242FA725000CB38D /* UserTokenRepository.swift */,
+				BA8F59272430457B00FFABEB /* PublicDogRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 		BA18C0B8242B01B7007902A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BA8F591F24303F1A00FFABEB /* Networks */,
 				BA087959242FA36B000CB38D /* Repositories */,
 				BA4BE661242F7C75009EE493 /* Flow */,
 				BA4BE659242F147C009EE493 /* Extension */,
@@ -155,6 +169,8 @@
 			children = (
 				BA4BE65A242F14C0009EE493 /* AlertExtension.swift */,
 				BA4BE65C242F3202009EE493 /* ErrorExtension.swift */,
+				BA8F592924304BDC00FFABEB /* RxMoya+JSON.swift */,
+				BA8F592B24304D0A00FFABEB /* MoyaResponse+JSON.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,8 +201,26 @@
 			isa = PBXGroup;
 			children = (
 				BA4BE671242F9DD3009EE493 /* UserToken.swift */,
+				BA8F59252430450F00FFABEB /* PublicDog.swift */,
 			);
 			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		BA8F591F24303F1A00FFABEB /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				BA8F5922243041CB00FFABEB /* Endpoints */,
+				BA8F592024303F4D00FFABEB /* APIProvider.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		BA8F5922243041CB00FFABEB /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				BA8F59232430432D00FFABEB /* PublicApi.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		BAB8A62B242AFEA0004FD26C = {
@@ -358,13 +392,19 @@
 				BA18C0B5242B018D007902A4 /* LoginViewController.swift in Sources */,
 				BA087962242FA725000CB38D /* UserTokenRepository.swift in Sources */,
 				BA4BE667242F7D84009EE493 /* ScreenResult.swift in Sources */,
+				BA8F59262430450F00FFABEB /* PublicDog.swift in Sources */,
 				BA08795C242FA3F0000CB38D /* RealmConfig.swift in Sources */,
+				BA8F592124303F4D00FFABEB /* APIProvider.swift in Sources */,
 				BA4BE665242F7CE2009EE493 /* NavigationEvent.swift in Sources */,
 				BAB8A638242AFEA0004FD26C /* AppDelegate.swift in Sources */,
 				BA4BE66F242F8130009EE493 /* HomeViewController.swift in Sources */,
+				BA8F59282430457B00FFABEB /* PublicDogRepository.swift in Sources */,
 				BA18C0B7242B01A8007902A4 /* LoginViewModel.swift in Sources */,
 				BA4BE672242F9DD3009EE493 /* UserToken.swift in Sources */,
+				BA8F592C24304D0A00FFABEB /* MoyaResponse+JSON.swift in Sources */,
 				BA4BE669242F7DDD009EE493 /* ViewController.swift in Sources */,
+				BA8F592A24304BDC00FFABEB /* RxMoya+JSON.swift in Sources */,
+				BA8F59242430432D00FFABEB /* PublicApi.swift in Sources */,
 				BA4BE660242F7C20009EE493 /* HomeScreen.swift in Sources */,
 				BA08795E242FA4AC000CB38D /* File.swift in Sources */,
 				BA4BE66B242F7FB3009EE493 /* HomeViewModel.swift in Sources */,

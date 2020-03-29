@@ -11,6 +11,7 @@ import RxSwift
 class LoginViewModel {
     private let disposeBag = DisposeBag()
     private let userTokenRepo = UserTokenRepository.shared
+    private let publicDogRepo = PublicDogRepository.shared
     
     let username = BehaviorSubject(value: "")
     let password = BehaviorSubject(value: "")
@@ -24,7 +25,22 @@ class LoginViewModel {
         self.isLoginActive = Observable.combineLatest(self.username, self.password).map { $0.0 != "" && $0.1 != "" }
     }
     
+//    func loginTapped(username: String, password: String) {
+//        self.userTokenRepo.login(username: username, password: password)
+//            .map { _ in }
+//            .observeOn(MainScheduler.instance)
+//            .subscribe(onSuccess: {  _ in
+//                self.didLogin.onNext(())
+//            }, onError: { [weak self] error in
+//                self?.didFailLogin.onNext(error)
+//            })
+//            .disposed(by: self.disposeBag)
+//    }
+    
     func loginTapped(username: String, password: String) {
+        self.publicDogRepo.fetch { publicDog in
+            print(publicDog.message)
+        }
         self.userTokenRepo.login(username: username, password: password)
             .map { _ in }
             .observeOn(MainScheduler.instance)

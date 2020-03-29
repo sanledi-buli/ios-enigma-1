@@ -10,6 +10,9 @@ import UIKit
 
 internal final class HomeViewController: ViewController {
     
+    @IBOutlet weak var homeButton: UIButton!
+    
+    
     private var viewModel: HomeViewModel?
     
     init(viewModel: HomeViewModel) {

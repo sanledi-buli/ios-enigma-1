@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Training1" customModuleProvider="target">
             <connections>
+                <outlet property="homeButton" destination="4Mo-Jb-GBY" id="La7-LW-2Ll"/>
                 <outlet property="view" destination="iN0-l3-epB" id="bhg-PD-bti"/>
             </connections>
         </placeholder>

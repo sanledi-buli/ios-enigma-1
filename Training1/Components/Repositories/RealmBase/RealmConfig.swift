@@ -12,6 +12,7 @@ import RealmSwift
 internal enum RealmConfig: String {
 
     case userToken = "UserToken"
+    case publicDog = "PublicDog"
 }
 
 // MARK: - Realm Configuration
@@ -34,6 +35,8 @@ extension RealmConfig {
         switch self {
         case .userToken:
             return [ UserToken.self ]
+        case .publicDog:
+            return [ PublicDog.self ]
         }
 
     }
