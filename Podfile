@@ -12,6 +12,7 @@ target 'Training1' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'netfox'
   pod 'JASON'
+  pod 'Reusable'
   # Pods for Training1
 
 end

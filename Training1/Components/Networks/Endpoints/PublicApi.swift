@@ -44,6 +44,7 @@ extension PublicApi: TargetType {
     var task: Task {
 
         switch self {
+            
         default:
             return .requestPlain
         }
@@ -62,7 +63,7 @@ extension PublicApi: TargetType {
 
         switch self {
         default:
-            return [ "Content-Type": "application/json" ]
+            return [ "Content-Type": "application/json"]
         }
     }
 

@@ -10,8 +10,7 @@ import UIKit
 
 internal final class HomeViewController: ViewController {
     
-    @IBOutlet weak var homeButton: UIButton!
-    
+    @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: HomeViewModel?
     
@@ -23,5 +22,42 @@ internal final class HomeViewController: ViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureTableView()
+    }
+    
+    func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(cellType: HomeTableViewCell.self)
+        tableView.tableFooterView = UIView()
+    }
+    
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.arrayOfItems.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: HomeTableViewCell  = tableView.dequeueReusableCell(for: indexPath, cellType: HomeTableViewCell.self)
+        
+        let contact = self.viewModel?.arrayOfItems[indexPath.row]
+        cell.contactLabel.text = contact?.contact
+        cell.statusLabel.text = contact?.status
+        return cell
+    }
+    
     
 }

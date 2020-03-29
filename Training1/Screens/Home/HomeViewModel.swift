@@ -10,10 +10,18 @@ import RxSwift
 
 class HomeViewModel {
     
-    var userId: String?
-    var token: String?
+    var arrayOfItems: [ContactModel] = []
     
     init() {
+        var contact1 = ContactModel()
+        contact1.contact = "Sanledi"
+        contact1.status = "Active"
+        
+        var contact2 = ContactModel()
+        contact2.contact = "Foo Bar"
+        contact2.status = "Disable"
+        arrayOfItems.append(contact1)
+        arrayOfItems.append(contact2)
         
     }
 }

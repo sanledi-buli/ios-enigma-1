@@ -33,6 +33,9 @@
 		BA8F59282430457B00FFABEB /* PublicDogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F59272430457B00FFABEB /* PublicDogRepository.swift */; };
 		BA8F592A24304BDC00FFABEB /* RxMoya+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592924304BDC00FFABEB /* RxMoya+JSON.swift */; };
 		BA8F592C24304D0A00FFABEB /* MoyaResponse+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592B24304D0A00FFABEB /* MoyaResponse+JSON.swift */; };
+		BA8F592F24305DBE00FFABEB /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F592E24305DBE00FFABEB /* HomeTableViewCell.swift */; };
+		BA8F593324305F7400FFABEB /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8F593224305F7400FFABEB /* HomeTableViewCell.xib */; };
+		BA8F59352430732700FFABEB /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F59342430732700FFABEB /* ContactModel.swift */; };
 		BAB8A638242AFEA0004FD26C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8A637242AFEA0004FD26C /* AppDelegate.swift */; };
 		BAB8A63E242AFEA1004FD26C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB8A63D242AFEA1004FD26C /* Assets.xcassets */; };
 		BAB8A641242AFEA1004FD26C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB8A640242AFEA1004FD26C /* Preview Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		BA8F59272430457B00FFABEB /* PublicDogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDogRepository.swift; sourceTree = "<group>"; };
 		BA8F592924304BDC00FFABEB /* RxMoya+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxMoya+JSON.swift"; sourceTree = "<group>"; };
 		BA8F592B24304D0A00FFABEB /* MoyaResponse+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+JSON.swift"; sourceTree = "<group>"; };
+		BA8F592E24305DBE00FFABEB /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		BA8F593224305F7400FFABEB /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		BA8F59342430732700FFABEB /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		BAB8A634242AFEA0004FD26C /* Training1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8A637242AFEA0004FD26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB8A63D242AFEA1004FD26C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 		BA18C0B8242B01B7007902A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BA8F592D24305D9400FFABEB /* Cells */,
 				BA8F591F24303F1A00FFABEB /* Networks */,
 				BA087959242FA36B000CB38D /* Repositories */,
 				BA4BE661242F7C75009EE493 /* Flow */,
@@ -152,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4BE670242F9D9C009EE493 /* RealmModel */,
+				BA8F59342430732700FFABEB /* ContactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +229,15 @@
 				BA8F59232430432D00FFABEB /* PublicApi.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		BA8F592D24305D9400FFABEB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BA8F592E24305DBE00FFABEB /* HomeTableViewCell.swift */,
+				BA8F593224305F7400FFABEB /* HomeTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BAB8A62B242AFEA0004FD26C = {
@@ -336,6 +353,7 @@
 				BAB8A641242AFEA1004FD26C /* Preview Assets.xcassets in Resources */,
 				BA4BE66D242F8109009EE493 /* HomeViewController.xib in Resources */,
 				BAB8A63E242AFEA1004FD26C /* Assets.xcassets in Resources */,
+				BA8F593324305F7400FFABEB /* HomeTableViewCell.xib in Resources */,
 				BA18C0B3242B0170007902A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +414,7 @@
 				BA08795C242FA3F0000CB38D /* RealmConfig.swift in Sources */,
 				BA8F592124303F4D00FFABEB /* APIProvider.swift in Sources */,
 				BA4BE665242F7CE2009EE493 /* NavigationEvent.swift in Sources */,
+				BA8F592F24305DBE00FFABEB /* HomeTableViewCell.swift in Sources */,
 				BAB8A638242AFEA0004FD26C /* AppDelegate.swift in Sources */,
 				BA4BE66F242F8130009EE493 /* HomeViewController.swift in Sources */,
 				BA8F59282430457B00FFABEB /* PublicDogRepository.swift in Sources */,
@@ -406,6 +425,7 @@
 				BA8F592A24304BDC00FFABEB /* RxMoya+JSON.swift in Sources */,
 				BA8F59242430432D00FFABEB /* PublicApi.swift in Sources */,
 				BA4BE660242F7C20009EE493 /* HomeScreen.swift in Sources */,
+				BA8F59352430732700FFABEB /* ContactModel.swift in Sources */,
 				BA08795E242FA4AC000CB38D /* File.swift in Sources */,
 				BA4BE66B242F7FB3009EE493 /* HomeViewModel.swift in Sources */,
 				BA4BE663242F7CA1009EE493 /* Screen.swift in Sources */,
